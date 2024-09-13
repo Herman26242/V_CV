@@ -262,6 +262,7 @@
 
 						<!-- Contact -->
 <article id="contact">
+   <article id="contact">
     <h2 class="major">Contact Me</h2>
     <p>Phone: <a href="tel:+27825529312">082 552 9312</a><br>
        Email: <a href="mailto:herman.vanderwesthuizen@nwu.ac.za">herman.vanderwesthuizen@nwu.ac.za</a>
@@ -274,8 +275,8 @@
             <span class="label">GitHub</span></a></li>
     </ul>
 
-    <h3>Upload an Image</h3>
-    <input type="file" id="fileInput" accept="image/*">
+    <h3>Upload a Document</h3>
+    <input type="file" id="fileInput" accept="*/*"> <!-- Allow any file type -->
     <button onclick="uploadFile()">Upload</button>
 
     <p id="uploadStatus"></p>
@@ -283,26 +284,23 @@
     <script>
         async function uploadFile() {
             const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
+            const file = fileInput.files[0];  // Get the first selected file
             
             if (!file) {
                 document.getElementById('uploadStatus').textContent = 'Please select a file!';
                 return;
             }
 
-            // Set the filename from the file
-            const filename = encodeURIComponent(file.name);
+            // Replace 'filename' in the API URL with the actual filename
+            const filename = encodeURIComponent(file.name);  // Encode the filename for the URL
             const apiUrl = `https://i4wovddpui.execute-api.af-south-1.amazonaws.com/Dev/oer-resources/${filename}`;
-
-            const formData = new FormData();
-            formData.append('file', file);
 
             try {
                 const response = await fetch(apiUrl, {
-                    method: 'PUT', // Assuming the API expects a PUT request for file upload
+                    method: 'PUT', // Adjust method if API expects POST
                     body: file,
                     headers: {
-                        'Content-Type': file.type
+                        'Content-Type': file.type // Set content type based on the file type
                     }
                 });
 
@@ -317,6 +315,7 @@
         }
     </script>
 </article>
+
 
 						<!-- Elements -->
 							<article id="elements">
