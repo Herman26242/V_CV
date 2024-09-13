@@ -261,16 +261,62 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact Me</h2>
-								<p>Phone: <a href="tel:+27825529312">082 552 9312</a><br>
-									Email: <a href="mailto:herman.vanderwesthuizen@nwu.ac.za">herman.vanderwesthuizen@nwu.ac.za</a></p>								
+<article id="contact">
+    <h2 class="major">Contact Me</h2>
+    <p>Phone: <a href="tel:+27825529312">082 552 9312</a><br>
+       Email: <a href="mailto:herman.vanderwesthuizen@nwu.ac.za">herman.vanderwesthuizen@nwu.ac.za</a>
+    </p>
 
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/herman-van-der-westhuizen-aaba69183/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BoUhmbzo8QA2WyZd9yDaZMA%3D%3D" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
-									<li><a href="https://github.com/Herman26242" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+    <ul class="icons">
+        <li><a href="https://www.linkedin.com/in/herman-van-der-westhuizen-aaba69183" class="icon brands fa-linkedin">
+            <span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/Herman26242" class="icon brands fa-github">
+            <span class="label">GitHub</span></a></li>
+    </ul>
+
+    <h3>Upload an Image</h3>
+    <input type="file" id="fileInput" accept="image/*">
+    <button onclick="uploadFile()">Upload</button>
+
+    <p id="uploadStatus"></p>
+
+    <script>
+        async function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                document.getElementById('uploadStatus').textContent = 'Please select a file!';
+                return;
+            }
+
+            // Set the filename from the file
+            const filename = encodeURIComponent(file.name);
+            const apiUrl = `https://i4wovddpui.execute-api.af-south-1.amazonaws.com/Dev/oer-resources/${filename}`;
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'PUT', // Assuming the API expects a PUT request for file upload
+                    body: file,
+                    headers: {
+                        'Content-Type': file.type
+                    }
+                });
+
+                if (response.ok) {
+                    document.getElementById('uploadStatus').textContent = 'File uploaded successfully!';
+                } else {
+                    document.getElementById('uploadStatus').textContent = `Upload failed: ${response.statusText}`;
+                }
+            } catch (error) {
+                document.getElementById('uploadStatus').textContent = `Upload error: ${error.message}`;
+            }
+        }
+    </script>
+</article>
 
 						<!-- Elements -->
 							<article id="elements">
