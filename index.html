@@ -394,33 +394,251 @@
 						<article id="skills">
 							<h2 class="major">Skills</h2>
 							<span class="image main"><img src="images/Skills.jpg" alt="" /></span>
-							<ul>
-								<li>Proficient in all Microsoft Office applications, ensuring efficient and effective document, presentation, and data management. Including all Power Platforms (PowerApps, PowerBI, Power Automate)</li>
-								<li>Advanced expertise in Google Suite, including data analysis, visualization, and automation.</li>
-								<li>Proficient in multiple programming languages, including HTML, C++, C#, Java, and DAX, enabling versatile and robust software development capabilities.</li>
-								<li>Strong interpersonal skills, facilitating excellent communication and collaboration within diverse teams.</li>
-								<li>Bilingual proficiency in Afrikaans and English, ensuring clear and effective communication in both languages.</li>
-								<li>Extensive experience with Learning Management Systems, particularly in the publication and management of study materials, enhancing online learning environments.</li>
-								<li>Quick learner with the ability to rapidly acquire new software skills, ensuring adaptability in dynamic technological landscapes.</li>
-								<li>High attention to detail, consistently delivering accurate and high-quality products that meet stringent quality standards.</li>
-								<li>Effective team player and independent worker, demonstrating reliability and adaptability in various work settings.</li>
-								<li>Dedicated and committed to achieving excellence in all tasks undertaken, reflecting a strong work ethic.</li>
-								<li>Exceptional administrative and record management skills, ensuring organized and efficient documentation processes.</li>
-								<li>Proven ability to provide excellent customer service, ensuring high levels of client satisfaction and support.</li>
-							</ul>
+
+							<style>
+.skills-category {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .skills-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .skills-header:hover {
+            background-color: #f0f0f0;
+        }
+        .skills-header h3 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+        .skills-content {
+            display: none;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+        .skills-content.active {
+            display: block;
+        }
+        .skills-content ul {
+            list-style-type: none;
+            padding: 0;
+			color: #333;
+        }
+        .skills-content li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+			color: #333;
+        }
+        .skills-content li::before {
+            content: '•';
+			color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 10px;
+        }
+        
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            #skills {
+                padding: 10px;
+            }
+            .skills-header h3 {
+                font-size: 1em;
+            }
+            .skills-content li {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+        }
+    </style>
+
+<div class="skills-category">
+	<div class="skills-header" onclick="toggleSection(this)">
+		<h3>Technical Skills</h3>
+		<i class="fas fa-chevron-down toggle-icon"></i>
+	</div>
+	<div class="skills-content">
+		<ul>
+			<li>Proficient in all Microsoft Office applications, ensuring efficient and effective document, presentation, and data management. Including all Power Platforms (PowerApps, PowerBI, Power Automate)</li>
+			<li>Advanced expertise in Google Suite, including data analysis, visualization, and automation</li>
+			<li>Proficient in multiple programming languages, including HTML, C++, C#, Java, and DAX, enabling versatile and robust software development capabilities</li>
+			<li>Extensive experience with Learning Management Systems, particularly in the publication and management of study materials</li>
+		</ul>
+	</div>
+</div>
+
+<div class="skills-category">
+	<div class="skills-header" onclick="toggleSection(this)">
+		<h3>Professional Attributes</h3>
+		<i class="fas fa-chevron-down toggle-icon"></i>
+	</div>
+	<div class="skills-content">
+		<ul>
+			<li>Strong interpersonal skills, facilitating excellent communication and collaboration within diverse teams</li>
+			<li>Quick learner with the ability to rapidly acquire new software skills, ensuring adaptability in dynamic technological landscapes</li>
+			<li>High attention to detail, consistently delivering accurate and high-quality products</li>
+			<li>Effective team player and independent worker, demonstrating reliability and adaptability</li>
+			<li>Dedicated and committed to achieving excellence in all tasks undertaken</li>
+		</ul>
+	</div>
+</div>
+
+<div class="skills-category">
+	<div class="skills-header" onclick="toggleSection(this)">
+		<h3>Communication & Soft Skills</h3>
+		<i class="fas fa-chevron-down toggle-icon"></i>
+	</div>
+	<div class="skills-content">
+		<ul>
+			<li>Bilingual proficiency in Afrikaans and English, ensuring clear and effective communication</li>
+			<li>Exceptional administrative and record management skills</li>
+			<li>Proven ability to provide excellent customer service</li>
+			<li>Strong problem-solving and analytical thinking capabilities</li>
+		</ul>
+	</div>
+</div>
+</article>
+
+<script>
+function toggleSection(header) {
+	const content = header.nextElementSibling;
+	const icon = header.querySelector('.toggle-icon');
+	
+	content.classList.toggle('active');
+	icon.classList.toggle('rotated');
+}
+</script>
+</body>
 
 						</article>
 
 						<!-- Work -->
+
+
 						<article id="work">
 							<h2 class="major">Professional Experience</h2>
 							<span class="image main"><img src="images/Work.jpg" alt="" /></span>
+							<style>
 
+								
+.work-section {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .work-header:hover {
+            background-color: #f0f0f0;
+        }
+        .work-header h2 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 0;
+        }
+        .work-header h3 {
+            font-size: 1em;
+            color: #333;
+            margin: 0;
+		}
+			.work-header h4 {
+            font-size: 1em;
+            color: #333;
+            margin: 0;
+        }
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+        .work-content {
+            display: none;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+        .work-content.active {
+            display: block;
+        }
+        .work-content ul {
+            padding-left: 30px;
+			color: #333;
+        }
+        .work-content li {
+            margin-bottom: 10px;
+			color: #333;
+        }
+        .work-content strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            #work {
+                padding: 10px;
+            }
+            .work-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .work-header h2 {
+                font-size: 1em;
+                margin-bottom: 5px;
+            }
+            .work-header h3 {
+                font-size: 0.9em;
+            }
+            .work-content ul {
+                padding-left: 20px;
+            }
+            .work-content li {
+                font-size: 0.9em;
+            }
+        }
+    </style>
 
-							<section>
-								<h2>01/01/2020 TO CURRENT</h2>
-								<h3>EDUCATION TECHNOLOGIST, NORTH-WEST UNIVERSITY</h3>
-								<h4>Key Roles:</h4>
+<body>
+
+        <div class="work-section">
+            <div class="work-header" onclick="toggleSection(this)">
+                <div>
+					<!-- latest work experience -->
+                    <h2>01/01/2020 TO CURRENT</h2>
+                    <h3>EDUCATION TECHNOLOGIST, <br/> NORTH-WEST UNIVERSITY</h3>
+                </div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="work-content">
+                <strong>Key Roles:</strong>
 								<ul>
 									<li>
 										<strong>Business Analyst/Developer:</strong>
@@ -457,7 +675,7 @@
 										</ul>
 									</li>
 								</ul>
-								<h4>Project List:</h4>
+								<strong>Project List:</strong>
 								<ul>
 									<li>Adaptive Learning leveraging Artificial intelligence within Higher Education</li>
 									<li>Digital classroom development</li>
@@ -465,74 +683,115 @@
 									<li>Video transfer project</li>
 									<li>SCORM project for articulate artifacts</li>
 								</ul>
-							</section>
+            </div>
+        </div>
 
-							<section>
-								<h2>06/01/2018 TO 30/12/2019</h2>
-								<h3>STUDY MATERIAL PRODUCTION COORDINATOR, NORTH-WEST UNIVERSITY</h3>
-								<h4>Key Responsibilities:</h4>
-								<ul>
-									<li>Oversee the production management of both hard copy and eLearning study materials.</li>
-									<li>Designed, developed, and implemented the current reporting sheet utilized for data analytics.</li>
-									<li>Contributed valuable data to enhance strategic planning, management, and the establishment of measurable objectives.</li>
-									<li>Manage and regularly update operational platform utilized for production management.</li>
-									<li>Perform office administration duties.</li>
-									<li>Provide training and guidance to Study Guide Coordinators.</li>
-									<li>Address general inquiries promptly and effectively.</li>
-									<li>Invest in personal development to stay current and grow professionally.</li>
-									<li>Act as a liaison with the Information Technology Center (ITC).</li>
-									<li>Play a pivotal role in supporting the development of new production systems.</li>
-								</ul>
-							</section>
 
-							<section>
-								<h2>01/04/2014 – 31/05/2018</h2>
-								<h3>FACTORY MANAGER, HENORG MELKERY</h3>
-								<h4>Key Responsibilities:</h4>
-								<ul>
-									<li>Ensured rigorous quality control to maintain high standards of product quality.</li>
-									<li>Acted as the primary liaison with consumers, addressing inquiries and resolving issues promptly.</li>
-									<li>Managed daily operations to ensure efficiency and productivity.</li>
-									<li>Optimized resource and material management to minimize business costs.</li>
-									<li>Ensured compliance with all legislative requirements related to Quality and Health & Safety.</li>
-									<li>Oversaw Support Services, including Human Resources, Information Technology, and Finance.</li>
-									<li>Handled administrative tasks to support smooth factory operations.</li>
-									<li>Directed merchandising strategies to enhance product visibility and sales.</li>
-									<li>Coordinated logistics to ensure timely delivery and inventory management.</li>
-									<li>Supervised maintenance activities to ensure equipment functionality and safety.</li>
-									<li>Performed various ad hoc tasks as needed to support factory operations.</li>
-								</ul>
-							</section>
+		        <!-- 2nd work experience-->
+        <div class="work-section">
+            <div class="work-header" onclick="toggleSection(this)">
+                <div>
+                    <h2>06/01/2018 TO 30/12/2019</h2>
+                    <h3>STUDY MATERIAL PRODUCTION COORDINATOR, <br/> NORTH-WEST UNIVERSITY</h3>
+                </div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="work-content">
+                <strong>Key Responsibilities:</strong>
+                <ul>
+					<li>Oversee the production management of both hard copy and eLearning study materials.</li>
+					<li>Designed, developed, and implemented the current reporting sheet utilized for data analytics.</li>
+					<li>Contributed valuable data to enhance strategic planning, management, and the establishment of measurable objectives.</li>
+					<li>Manage and regularly update operational platform utilized for production management.</li>
+					<li>Perform office administration duties.</li>
+					<li>Provide training and guidance to Study Guide Coordinators.</li>
+					<li>Address general inquiries promptly and effectively.</li>
+					<li>Invest in personal development to stay current and grow professionally.</li>
+					<li>Act as a liaison with the Information Technology Center (ITC).</li>
+					<li>Play a pivotal role in supporting the development of new production systems.</li>
+                </ul>
+            </div>
+        </div>
 
-							<section>
-								<h2>01/01/2011 – 31/05/2014</h2>
-								<h3>RESEARCH ASSISTANT AND FIELDWORK MANAGER, MARKDATA</h3>
-								<h4>Key Responsibilities:</h4>
-								<ul>
-									<li>Designed and structured comprehensive questionnaires.</li>
-									<li>Managed the administration of research projects, both before and after data collection.</li>
-									<li>Oversaw the administration and coordination of fieldwork activities.</li>
-									<li>Trained fieldworkers in face-to-face, telephone, and CATI (SNAP Surveys) interviewing techniques.</li>
-									<li>Managed databases and conducted data mining for research purposes.</li>
-									<li>Designed call center architecture for computer-assisted interviews.</li>
-									<li>Acted as a liaison with project stakeholders, ensuring clear communication and project alignment.</li>
-									<li>Trained and supervised coders to ensure data accuracy.</li>
-									<li>Captured and processed data efficiently and accurately.</li>
-									<li>Implemented rigorous quality control measures.</li>
-									<li>Conducted frequencies and logic tests on databases to ensure data integrity.</li>
-									<li>Tabulated data using SPSS for detailed analysis.</li>
-									<li>Created tables and graphs for inclusion in final reports.</li>
-									<li>Formatted and edited proposals and reports to ensure clarity and professionalism.</li>
-									<li>Performed various ad hoc tasks as required to support research projects.</li>
-								</ul>
-								<h4>Projects:</h4>
-								<ul>
-									<li>UCT satisfaction study</li>
-									<li>Political influence study</li>
-									<li>Telkom internal questionnaires</li>
-								</ul>
-							</section>
-						</article>
+        <!-- 3rd work experience-->
+
+		<div class="work-section">
+            <div class="work-header" onclick="toggleSection(this)">
+                <div>
+                    <h2>01/04/2014 TO 31/05/2018</h2>
+                    <h3>FACTORY MANAGER,  <br/> HENORG MELKERY</h3>
+                </div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="work-content">
+                <strong>Key Responsibilities:</strong>
+                <ul>
+					<li>Ensured rigorous quality control to maintain high standards of product quality.</li>
+					<li>Acted as the primary liaison with consumers, addressing inquiries and resolving issues promptly.</li>
+					<li>Managed daily operations to ensure efficiency and productivity.</li>
+					<li>Optimized resource and material management to minimize business costs.</li>
+					<li>Ensured compliance with all legislative requirements related to Quality and Health & Safety.</li>
+					<li>Oversaw Support Services, including Human Resources, Information Technology, and Finance.</li>
+					<li>Handled administrative tasks to support smooth factory operations.</li>
+					<li>Directed merchandising strategies to enhance product visibility and sales.</li>
+					<li>Coordinated logistics to ensure timely delivery and inventory management.</li>
+					<li>Supervised maintenance activities to ensure equipment functionality and safety.</li>
+					<li>Performed various ad hoc tasks as needed to support factory operations.</li>
+                </ul>
+            </div>
+        </div>
+
+		 <!-- 4th work experience-->
+
+		 <div class="work-section">
+            <div class="work-header" onclick="toggleSection(this)">
+                <div>
+                    <h2>01/01/2011 TO 31/05/2014</h2>
+                    <h3>RESEARCH ASSISTANT AND FIELDWORK MANAGER, <br/> MARKDATA</h3>
+                </div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="work-content">
+                <strong>Key Responsibilities:</strong>
+                <ul>
+					<li>Designed and structured comprehensive questionnaires.</li>
+					<li>Managed the administration of research projects, both before and after data collection.</li>
+					<li>Oversaw the administration and coordination of fieldwork activities.</li>
+					<li>Trained fieldworkers in face-to-face, telephone, and CATI (SNAP Surveys) interviewing techniques.</li>
+					<li>Managed databases and conducted data mining for research purposes.</li>
+					<li>Designed call center architecture for computer-assisted interviews.</li>
+					<li>Acted as a liaison with project stakeholders, ensuring clear communication and project alignment.</li>
+					<li>Trained and supervised coders to ensure data accuracy.</li>
+					<li>Captured and processed data efficiently and accurately.</li>
+					<li>Implemented rigorous quality control measures.</li>
+					<li>Conducted frequencies and logic tests on databases to ensure data integrity.</li>
+					<li>Tabulated data using SPSS for detailed analysis.</li>
+					<li>Created tables and graphs for inclusion in final reports.</li>
+					<li>Formatted and edited proposals and reports to ensure clarity and professionalism.</li>
+					<li>Performed various ad hoc tasks as required to support research projects.</li>
+				</ul>
+				<strong>Project List:</strong>
+				<ul>
+					<li>UCT satisfaction study</li>
+					<li>Political influence study</li>
+					<li>Telkom internal questionnaires</li>
+                </ul>
+            </div>
+        </div>
+
+    </article>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            content.classList.toggle('active');
+            icon.classList.toggle('rotated');
+        }
+    </script>
+</body>						
+</article>
 
 						<!-- About -->
 						<article id="about">
