@@ -827,45 +827,7 @@ function toggleSection(header) {
 									</li>
 								</ul>
 
-								<h3>Upload a Document</h3>
-								<input type="file" id="fileInput" accept="*/*"> <!-- Allow any file type -->
-								<button onclick="uploadFile()">Upload</button>
-
-								<p id="uploadStatus"></p>
-
-								<script>
-									async function uploadFile() {
-										const fileInput = document.getElementById('fileInput');
-										const file = fileInput.files[0];  // Get the first selected file
-
-										if (!file) {
-											document.getElementById('uploadStatus').textContent = 'Please select a file!';
-											return;
-										}
-
-										// Replace 'filename' in the API URL with the actual filename
-										const filename = encodeURIComponent(file.name);  // Encode the filename for the URL
-										const apiUrl = `https://i4wovddpui.execute-api.af-south-1.amazonaws.com/Dev/oer-resources/${filename}`;
-
-										try {
-											const response = await fetch(apiUrl, {
-												method: 'PUT', // Adjust method if API expects POST
-												body: file,
-												headers: {
-													'Content-Type': file.type // Set content type based on the file type
-												}
-											});
-
-											if (response.ok) {
-												document.getElementById('uploadStatus').textContent = 'File uploaded successfully!';
-											} else {
-												document.getElementById('uploadStatus').textContent = `Upload failed: ${response.statusText}`;
-											}
-										} catch (error) {
-											document.getElementById('uploadStatus').textContent = `Upload error: ${error.message}`;
-										}
-									}
-								</script>
+					
 							</article>
 
 
