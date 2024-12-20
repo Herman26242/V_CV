@@ -7,35 +7,76 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="images/logo.png" />
+		<!-- The styling of the translation button. -->
+		<style>
+			#language-toggle {
+				position: fixed; /* Fix the position on the screen */
+				bottom: 20px; /* Distance from the bottom */
+				left: 50%; /* Position in the center horizontally */
+				transform: translateX(-50%); /* Adjust the element to truly center it */
+				padding: 10px 20px;
+				background-color: Black;
+				color: black;
+				border: none;
+				cursor: pointer;
+				font-weight: normal;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 50px;
+				width: auto;
+				border-radius: 5px;
+			}
+
+			#language-toggle:hover {
+				background-color: darkgray;
+			}
+
+		</style>
+
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		
 			<div id="wrapper">
+				
+			
 
 				<!-- Header -->
-					<header id="header">
-						<div class="logo" style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.7);">
-							<img src="images/logo.png" alt="Logo" style="max-width: 50%; height: auto; padding-right: 10px">
-						</div>
-						<div class="content">
-							<div class="inner" style="background-color: rgba(0, 0, 0, 0.5);">
-								<h1>Herman van der Westhuizen</h1>
-								<p>I am a highly motivated and hardworking individual seeking a new challenge which will utilize my meticulous attention to detail, fast learning, and friendly, professional manner. Eventual career goals include further study and personal improvement.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#about">About Me</a></li>
-								<li style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#work">Professional Experience</a></li>
-								<li style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#education">Education</a></li>
-								<li style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#skills">Skills</a></li>
-								<li style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#contact">Contact Me</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
-					<br/>
+				<header id="header">
+					
+					</style>
+					<div class="logo" style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.7);">
+						<img src="images/logo.png" alt="Logo" style="max-width: 50%; height: auto; padding-right: 10px">
+					</div>
+					<div class="inner" style="background-color: rgba(0, 0, 0, 0.5); ">
+					<div class="content" id="content-element" 
+					data-english="<h1>Herman van der Westhuizen</h1>
+						<p>I am a highly motivated and hardworking individual seeking a new challenge which will utilize my meticulous attention to detail, fast learning, and friendly, professional manner. Eventual career goals include further study and personal improvement.</p>
+					" data-afrikaans="
+						<h1>Herman van der Westhuizen</h1>
+						<p>Ek is 'n hoogs gemotiveerde en harde werker wat 'n nuwe uitdaging soek wat my noukeurige aandag aan detail, vinnige leer en vriendelike, professionele manier sal benut. My uiteindelike loopbaandoelwitte sluit in verdere studie en persoonlike verbetering.</p>
+					"; style="padding-top:  50px;">
+					
+						<h1>Herman van der Westhuizen</h1>
+						<p>I am a highly motivated and hardworking individual seeking a new challenge which will utilize my meticulous attention to detail, fast learning, and friendly, professional manner. Eventual career goals include further study and personal improvement.</p>
+					</div>
+				</div>
+					<nav id = "menu">
+						<ul>
+							<li data-english="About me" data-afrikaans="Oor My" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#about">About Me</a></li>
+							<li data-english="Prefessional Experience" data-afrikaans="Professionele Ervaring" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#work">Professional Experience</a></li>
+							<li data-english="Education" data-afrikaans="Onderwys" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#education">Education</a></li>
+							<li data-english="Skills" data-afrikaans="Vaardighede" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#skills">Skills</a></li>
+							<li data-english="Contact me" data-afrikaans="Kontak My" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#contact">Contact Me</a></li>
+						</ul>
+					</nav>
+
+					<button id="language-toggle" type="button">Afrikaans</button>
+				</header>
+				<br/>
 
 
 
@@ -177,10 +218,16 @@
 						</head>
 						<body>
 							<article id="education">
-								<h2 class="major">Education</h2>
-								<p style="text-align: center; margin-bottom: 20px; color: #7f8c8d;">
-									Supporting documentation for qualifications is available upon request.
-								</p>
+								<h2 class="major" 
+								data-english="Education" 
+								data-afrikaans="Onderwys">
+								Education
+							</h2>
+							<p style="text-align: center; margin-bottom: 20px; color: #7f8c8d;"
+							   data-english="Supporting documentation for qualifications is available upon request." 
+							   data-afrikaans="Ondersteunende dokumentasie vir kwalifikasies is op aanvraag beskikbaar.">
+								Supporting documentation for qualifications is available upon request.
+							</p>
 
 								<!-- Educaiton for 2024 -->
 
@@ -193,10 +240,20 @@
 											<img src="images/CMYK_NWU_Logo-Purple.jpg" alt="North West University Logo">
 										</div>
 										<div>
-											<strong>B.SC INFORMATION TECHNOLOGY (CUM LAUDE),<br/> NORTH WEST UNIVERSITY</strong>
-											<p style: #333>
-												The degree focuses on developing strong technical and analytical skills, with coursework covering key areas such as software development, systems analysis, data management, and network design.
-											</p>
+											<strong
+											data-english="B.SC INFORMATION TECHNOLOGY (CUM LAUDE)," 
+											data-afrikaans="B.SC INFORMATIE TEKNOLOGIE (CUM LAUDE),">
+											B.SC INFORMATION TECHNOLOGY (CUM LAUDE),
+											</strong>
+											<strong 
+											data-english="NORTH WEST UNIVERSITY" 
+											data-afrikaans="NOORD-WES UNIVERSITEIT">
+											NORTH WEST UNIVERSITY
+											</strong>
+											<p data-english="The degree focuses on developing strong technical and analytical skills, with coursework covering key areas such as software development, systems analysis, data management, and network design." 
+											data-afrikaans="Die graad fokus op die ontwikkeling van sterk tegniese en analitiese vaardighede, met kursuswerk wat sleutelareas soos sagtewareontwikkeling, sisteemanalisering, databasiebestuur en netwerkontwerp dek.">
+											 The degree focuses on developing strong technical and analytical skills, with coursework covering key areas such as software development, systems analysis, data management, and network design.
+										 </p>
 										</div>
 									</div>
 									 <!-- 2 -->
@@ -207,9 +264,10 @@
 										<div>
 											<strong>PEER REVIEWER COURSE, <br/>
 												QUALITY MATTERS</strong>
-											<p>
-												The earner demonstrated the ability to write helpful recommendations and completed a practice course review applying QM Rubric Specific Review Standards correctly to a real online course.
-											</p>
+												<p data-english="The earner demonstrated the ability to write helpful recommendations and completed a practice course review applying QM Rubric Specific Review Standards correctly to a real online course." 
+												data-afrikaans="Die ontvanger het die vermoëdemonstrasie gedoen om nuttige aanbevelings te skryf en het 'n praktyk kursus hersiening voltooi wat die QM Rubriek Spesifieke Hersieningsstandaarde korrek toegepas het op 'n werklike aanlyn kursus.">
+												 The earner demonstrated the ability to write helpful recommendations and completed a practice course review applying QM Rubric Specific Review Standards correctly to a real online course.
+											 </p>
 										</div>
 									</div>
 
@@ -227,9 +285,10 @@
 													LEARNING ANALYTICS FOR TEACHERS,
 													<br/> INSTITUTE FOR RESEARCH IN OPEN, DISTANCE AND ELEARNING (IFEL)
 												</strong>
-												<p>
-													This 5-week course offers foundational knowledge on learning analytics, particularly in the context of a teacher.
-												</p>
+												<p data-english="This 5-week course offers foundational knowledge on learning analytics, particularly in the context of a teacher." 
+												data-afrikaans="Hierdie 5-week kursus bied fundamentele kennis oor leeranalitiek, veral in die konteks van 'n onderwyser.">
+												 This 5-week course offers foundational knowledge on learning analytics, particularly in the context of a teacher.
+											 </p>
 											</div>
 										</div>
 
@@ -243,9 +302,10 @@
 													DESIGNING A COLLABORATIVE INSTRUCTIONAL TECHNOLOGY SUPPORT MODEL
 													,<br/> EDUCAUSE
 												</strong>
-												<p>
-													Badge earners explored factors influencing how instructional technology support services are offered in higher education and identified ways to address potential implementation obstacles.
-												</p>
+												<p data-english="Badge earners explored factors influencing how instructional technology support services are offered in higher education and identified ways to address potential implementation obstacles." 
+												data-afrikaans="Merkvervaardigers het faktore ondersoek wat die manier beïnvloed hoe onderrigtegnologie-ondersteuningsdienste in hoëronderwys aangebied word en het maniere geïdentifiseer om potensiële implementasiehindernisse aan te spreek.">
+												 Badge earners explored factors influencing how instructional technology support services are offered in higher education and identified ways to address potential implementation obstacles.
+											 </p>
 											</div>
 										</div>
 										<!-- 3 -->
@@ -258,9 +318,10 @@
 													APPLYING THE QM RUBRIC,<br/>
 													QUALITY MATTERS
 												</strong>
-												<p>
-													Digital Credentials from Quality Matters showcase evidence-based achievements in QM Professional Development.
-												</p>
+												<p data-english="Digital Credentials from Quality Matters showcase evidence-based achievements in QM Professional Development." 
+												data-afrikaans="Digitale sertifikate van Quality Matters vertoon bewysgebaseerde prestasies in QM Professionele Ontwikkeling.">
+												 Digital Credentials from Quality Matters showcase evidence-based achievements in QM Professional Development.
+											 </p>
 											</div>
 										</div>
 										<!-- Educaiton for 2022 -->
@@ -273,12 +334,18 @@
 													<img src="images/UJ_Logo.png" alt="UJ University Logo">
 												</div>
 												<div>
-													<strong>
-														RESEARCH METHODOLOGY ONLINE, <br/> UNIVERSITY OF JOHANNESBURG
-													</strong>
-													<p>
-														After completion I am able to explain the research process, select appropriate research methods and paradigms, write literature reviews and research proposals, and conduct basic analysis on both qualitative and quantitative data, including descriptive and inferential statistics.
-													</p>
+												<strong data-english="RESEARCH METHODOLOGY ONLINE," 
+												data-afrikaans="NAVORSINGS METODOLOGIE AANLYN,">
+												RESEARCH METHODOLOGY ONLINE,
+												</strong>
+												<strong data-english="UNIVERSITY OF JOHANNESBURG" 
+												data-afrikaans="UNIVERSITEIT VAN JOHANNESBURG">
+												UNIVERSITY OF JOHANNESBURG
+												</strong>
+											<p data-english="After completion I am able to explain the research process, select appropriate research methods and paradigms, write literature reviews and research proposals, and conduct basic analysis on both qualitative and quantitative data, including descriptive and inferential statistics." 
+											data-afrikaans="Na voltooiing kan ek die navorsingsproses verduidelik, toeplike navorsingsmetodes en paradigmas kies, literatuur oorsigte en navorsingsvoorstelle skryf, en basiese analise uitvoer op beide kwalitatiewe en kwantitatiewe data, insluitend beskrywende en inferensiële statistiek.">
+											 After completion I am able to explain the research process, select appropriate research methods and paradigms, write literature reviews and research proposals, and conduct basic analysis on both qualitative and quantitative data, including descriptive and inferential statistics.
+										 </p>
 												</div><!-- Educaiton for 2010 -->
 
 											</div>
@@ -293,13 +360,21 @@
 														<img src="images/CMYK_NWU_Logo-Purple.jpg" alt="North West University Logo">
 													</div>
 													<div>
-														<strong>
-															POST GRADUATE DIPLOMA IN MANAGEMENT WITH BUSINESS ADMINISTRATION, <br/>
-															NORTH WEST UNIVERSITY
-														</strong>
-														<p>
-															Post Graduate Diploma in Management with Business Administration at the North West University Business School completed with distinction.
-														</p>
+														<strong 
+														data-english="POST GRADUATE DIPLOMA IN MANAGEMENT WITH BUSINESS ADMINISTRATION," 
+														data-afrikaans="NAGRAADSE DIPLOMA IN BESTUUR MET BESIGHEIDSADMINISTRASIE,">
+														POST GRADUATE DIPLOMA IN MANAGEMENT WITH BUSINESS ADMINISTRATION,
+													</strong>
+													<strong 
+														data-english="NORTH WEST UNIVERSITY" 
+														data-afrikaans="NOORDWES-UNIVERSITEIT">
+														NORTH WEST UNIVERSITY
+													</strong>
+													<p 
+														data-english="Post Graduate Diploma in Management with Business Administration at the North West University Business School completed with distinction." 
+														data-afrikaans="Nagraadse Diploma in Bestuur met Besigheidsadministrasie by die Noordwes-Universiteit se Besigheidskool voltooi met onderskeiding.">
+														Post Graduate Diploma in Management with Business Administration at the North West University Business School completed with distinction.
+													</p>
 													</div>
 												</div>
 
@@ -309,13 +384,21 @@
 														<img src="images/CMYK_NWU_Logo-Purple.jpg" alt="North West University Logo">
 													</div>
 													<div>
-														<strong>
-															SHORT LEARNING PROGRAMME IN BASIC WEB PAGE DESIGN,<br/>
-															NORTH WEST UNIVERSITY
-														</strong>
-														<p>
-															Completed a short course at the North West University creativity center.
-														</p>
+														<strong 
+														data-english="SHORT LEARNING PROGRAMME IN BASIC WEB PAGE DESIGN," 
+														data-afrikaans="KORTLEERPROGRAM IN BASIESE WEBBLADONTWERP,">
+														SHORT LEARNING PROGRAMME IN BASIC WEB PAGE DESIGN,
+													</strong>
+													<strong 
+														data-english="NORTH WEST UNIVERSITY" 
+														data-afrikaans="NOORDWES-UNIVERSITEIT">
+														NORTH WEST UNIVERSITY
+													</strong>
+													<p 
+														data-english="Completed a short course at the North West University creativity center." 
+														data-afrikaans="'n Kort kursus voltooi by die Noordwes-Universiteit se kreatiwiteitssentrum.">
+														Completed a short course at the North West University creativity center.
+													</p>
 													</div>
 												</div>
 
@@ -328,12 +411,21 @@
 															<img src="images/WITS_Logo.jpg" alt="Wits University Logo">
 														</div>
 														<div>
-															<strong>
-																INSTRUCTIONAL DESIGN,<br/> UNIVERSITY OF THE WITWATERSRAND
-															</strong>
-															<p>
-																Completion of the University of Witwatersrand Instructional Design online short course.
-															</p>
+															<strong 
+															data-english="INSTRUCTIONAL DESIGN," 
+															data-afrikaans="INSTRUKSIONELE ONTWERP,">
+															INSTRUCTIONAL DESIGN,
+														</strong>
+														<strong 
+															data-english=" UNIVERSITY OF THE WITWATERSRAND" 
+															data-afrikaans="UNIVERSITEIT VAN DIE WITWATERSRAND">
+															UNIVERSITY OF THE WITWATERSRAND
+														</strong>
+														<p 
+															data-english="Completion of the University of Witwatersrand Instructional Design online short course." 
+															data-afrikaans="Voltooiing van die Universiteit van die Witwatersrand se aanlyn kort kursus in Instruksionele Ontwerp.">
+															Completion of the University of Witwatersrand Instructional Design online short course.
+														</p>
 														</div>
 
 													</div>
@@ -344,12 +436,21 @@
 															<img src="images/UCT_Logo.jpg" alt="UCT Logo">
 														</div>
 														<div>
-															<strong>
-																PROJECT MANAGEMENT FOUNDATIONS,<br/> UNIVERSITY OF CAPE TOWN
-															</strong>
-															<p>
-																Completion of the University of Cape Town Project Management Foundations online short course.
-															</p>
+															<strong 
+															data-english="PROJECT MANAGEMENT FOUNDATIONS," 
+															data-afrikaans="GRONDSLAG VAN PROJEKBESTUUR,">
+															PROJECT MANAGEMENT FOUNDATIONS,
+														</strong>
+														<strong 
+															data-english="UNIVERSITY OF CAPE TOWN" 
+															data-afrikaans="UNIVERSITEIT VAN KAAPSTAD">
+															UNIVERSITY OF CAPE TOWN
+														</strong>
+														<p 
+															data-english="Completion of the University of Cape Town Project Management Foundations online short course." 
+															data-afrikaans="Voltooiing van die Universiteit van Kaapstad se aanlyn kort kursus in Grondslae van Projekbestuur.">
+															Completion of the University of Cape Town Project Management Foundations online short course.
+														</p>
 														</div>
 													</div>
 
@@ -363,12 +464,21 @@
 																	<img src="images/SAMRA_Logo.jpg" alt="SAMRA Logo">
 																</div>
 																<div>
-																	<strong>
-																		FIELDWORKER TRAINING,<br/> SAMRA
-																	</strong>
-																	<p>
-																		Continuing Education in fieldworker training for conducting interviews and selecting samples in demarcated areas.n.
-																	</p>
+																	<strong 
+																	data-english="FIELDWORKER TRAINING," 
+																	data-afrikaans="VELDWERKER-OPLEIDING,">
+																	FIELDWORKER TRAINING,
+																</strong>
+																<strong 
+																data-english="SAMRA" 
+																data-afrikaans="SAMRA">
+																SAMRA
+															</strong>
+																<p 
+																	data-english="Continuing Education in fieldworker training for conducting interviews and selecting samples in demarcated areas." 
+																	data-afrikaans="Voortgesette Onderwys in veldwerker-opleiding vir die uitvoer van onderhoude en die kies van steekproewe in afgebakende gebiede.">
+																	Continuing Education in fieldworker training for conducting interviews and selecting samples in demarcated areas.
+																</p>
 																</div><!-- Educaiton for 2010 -->
 
 															</div>
@@ -382,12 +492,21 @@
 																		<img src="images/TUKS_Logo.jpg" alt="UP University Logo">
 																	</div>
 																	<div>
-																		<strong>
-																			B.COM MARKETING MANAGEMENT,<br/> UNIVERSITY OF PRETORIA
-																		</strong>
-																		<p>
-																			Management degree specializing in Marketing Management, Communication Management, and Business Management.
-																		</p>
+																		<strong 
+																	data-english="B.COM MARKETING MANAGEMENT," 
+																	data-afrikaans="B.COM BEMARKINGSBESTUUR,">
+																	B.COM MARKETING MANAGEMENT,
+																</strong>
+																<strong 
+																	data-english="UNIVERSITY OF PRETORIA" 
+																	data-afrikaans="UNIVERSITEIT VAN PRETORIA">
+																	UNIVERSITY OF PRETORIA
+																</strong>
+																<p 
+																	data-english="Management degree specializing in Marketing Management, Communication Management, and Business Management." 
+																	data-afrikaans="Bestuursgraad gespesialiseer in Bemarkingsbestuur, Kommunikasiebestuur, en Besigheidsbestuur.">
+																	Management degree specializing in Marketing Management, Communication Management, and Business Management.
+																</p>
 																	</div><!-- Educaiton for 2010 -->
 
 																</div>
@@ -478,46 +597,110 @@
 
 <div class="skills-category">
 	<div class="skills-header" onclick="toggleSection(this)">
-		<h3>Technical Skills</h3>
+		<h3 
+		data-english="Technical Skills" 
+		data-afrikaans="Tegniese Vaardighede">
+		Technical Skills
+		</h3>
 		<i class="fas fa-chevron-down toggle-icon"></i>
 	</div>
 	<div class="skills-content">
 		<ul>
-			<li>Proficient in all Microsoft Office applications, ensuring efficient and effective document, presentation, and data management. Including all Power Platforms (PowerApps, PowerBI, Power Automate)</li>
-			<li>Advanced expertise in Google Suite, including data analysis, visualization, and automation</li>
-			<li>Proficient in multiple programming languages, including HTML, C++, C#, Java, and DAX, enabling versatile and robust software development capabilities</li>
-			<li>Extensive experience with Learning Management Systems, particularly in the publication and management of study materials</li>
+				<li 
+                    data-english="Proficient in all Microsoft Office applications, ensuring efficient and effective document, presentation, and data management. Including all Power Platforms (PowerApps, PowerBI, Power Automate)" 
+                    data-afrikaans="Beheersing van alle Microsoft Office toepassings, wat doeltreffende dokument-, aanbieding- en data-bestuur verseker. Dit sluit alle Power Platforms in (PowerApps, PowerBI, Power Automate)">
+                    Proficient in all Microsoft Office applications, ensuring efficient and effective document, presentation, and data management. Including all Power Platforms (PowerApps, PowerBI, Power Automate)
+                </li>
+                <li 
+                    data-english="Advanced expertise in Google Suite, including data analysis, visualization, and automation" 
+                    data-afrikaans="Gevorderde kundigheid in Google Suite, insluitend data-ontleding, visualisering en outomatisering">
+                    Advanced expertise in Google Suite, including data analysis, visualization, and automation
+                </li>
+                <li 
+                    data-english="Proficient in multiple programming languages, including HTML, C++, C#, Java, and DAX, enabling versatile and robust software development capabilities" 
+                    data-afrikaans="Beheersing van verskeie programmeertale, insluitend HTML, C++, C#, Java en DAX, wat veelsydige en robuuste sagteware-ontwikkeling moontlik maak">
+                    Proficient in multiple programming languages, including HTML, C++, C#, Java, and DAX, enabling versatile and robust software development capabilities
+                </li>
+                <li 
+                    data-english="Extensive experience with Learning Management Systems, particularly in the publication and management of study materials" 
+                    data-afrikaans="Uitgebreide ervaring met Leerbestuurstelsels, veral in die publikasie en bestuur van studiemateriaal">
+                    Extensive experience with Learning Management Systems, particularly in the publication and management of study materials
+                </li>
 		</ul>
 	</div>
 </div>
 
 <div class="skills-category">
 	<div class="skills-header" onclick="toggleSection(this)">
-		<h3>Professional Attributes</h3>
+		<h3 
+                data-english="Professional Attributes" 
+                data-afrikaans="Professionele Kenmerke">
+                Professional Attributes
+            </h3>
 		<i class="fas fa-chevron-down toggle-icon"></i>
 	</div>
 	<div class="skills-content">
 		<ul>
-			<li>Strong interpersonal skills, facilitating excellent communication and collaboration within diverse teams</li>
-			<li>Quick learner with the ability to rapidly acquire new software skills, ensuring adaptability in dynamic technological landscapes</li>
-			<li>High attention to detail, consistently delivering accurate and high-quality products</li>
-			<li>Effective team player and independent worker, demonstrating reliability and adaptability</li>
-			<li>Dedicated and committed to achieving excellence in all tasks undertaken</li>
+			<li 
+			data-english="Strong interpersonal skills, facilitating excellent communication and collaboration within diverse teams" 
+			data-afrikaans="Sterk interpersoonlike vaardighede, wat uitstekende kommunikasie en samewerking binne diverse spanne fasiliteer">
+			Strong interpersonal skills, facilitating excellent communication and collaboration within diverse teams
+		</li>
+		<li 
+			data-english="Quick learner with the ability to rapidly acquire new software skills, ensuring adaptability in dynamic technological landscapes" 
+			data-afrikaans="Vinige leerder met die vermoë om nuwe sagteware-vaardighede vinnig aan te leer, wat aanpasbaarheid in dinamiese tegnologiese landskappe verseker">
+			Quick learner with the ability to rapidly acquire new software skills, ensuring adaptability in dynamic technological landscapes
+		</li>
+		<li 
+			data-english="High attention to detail, consistently delivering accurate and high-quality products" 
+			data-afrikaans="Hoë aandag aan detail, wat konsekwent akkurate en hoë gehalte produkte lewer">
+			High attention to detail, consistently delivering accurate and high-quality products
+		</li>
+		<li 
+			data-english="Effective team player and independent worker, demonstrating reliability and adaptability" 
+			data-afrikaans="Doeltreffende spanlid en onafhanklike werker, wat betroubaarheid en aanpasbaarheid demonstreer">
+			Effective team player and independent worker, demonstrating reliability and adaptability
+		</li>
+		<li 
+			data-english="Dedicated and committed to achieving excellence in all tasks undertaken" 
+			data-afrikaans="Toegewyd en verbind tot die bereiking van uitnemendheid in alle take">
+			Dedicated and committed to achieving excellence in all tasks undertaken
+		</li>
 		</ul>
 	</div>
 </div>
 
 <div class="skills-category">
 	<div class="skills-header" onclick="toggleSection(this)">
-		<h3>Communication & Soft Skills</h3>
+		<h3 
+		data-english="Communication & Soft Skills" 
+		data-afrikaans="Kommunikasie- en Sagte Vaardighede">
+		Communication & Soft Skills
+	</h3>
 		<i class="fas fa-chevron-down toggle-icon"></i>
 	</div>
 	<div class="skills-content">
 		<ul>
-			<li>Bilingual proficiency in Afrikaans and English, ensuring clear and effective communication</li>
-			<li>Exceptional administrative and record management skills</li>
-			<li>Proven ability to provide excellent customer service</li>
-			<li>Strong problem-solving and analytical thinking capabilities</li>
+			<li 
+			data-english="Bilingual proficiency in Afrikaans and English, ensuring clear and effective communication" 
+			data-afrikaans="Meertalige vaardigheid in Afrikaans en Engels, wat duidelike en effektiewe kommunikasie verseker">
+			Bilingual proficiency in Afrikaans and English, ensuring clear and effective communication
+		</li>
+		<li 
+			data-english="Exceptional administrative and record management skills" 
+			data-afrikaans="Uitstekende administratiewe en rekordbestuursvaardighede">
+			Exceptional administrative and record management skills
+		</li>
+		<li 
+			data-english="Proven ability to provide excellent customer service" 
+			data-afrikaans="Bewese vermoë om uitstekende kliëntediens te lewer">
+			Proven ability to provide excellent customer service
+		</li>
+		<li 
+			data-english="Strong problem-solving and analytical thinking capabilities" 
+			data-afrikaans="Sterk probleemoplossings- en analitiese denke vermoëns">
+			Strong problem-solving and analytical thinking capabilities
+		</li>
 		</ul>
 	</div>
 </div>
@@ -638,8 +821,21 @@ function toggleSection(header) {
             <div class="work-header" onclick="toggleSection(this)">
                 <div>
 					<!-- latest work experience -->
-                    <h2>01/01/2020 TO CURRENT</h2>
-                    <h3>EDUCATION TECHNOLOGIST, <br/> NORTH-WEST UNIVERSITY</h3>
+					<h2 
+					data-english="01/01/2020 TO CURRENT" 
+					data-afrikaans="01/01/2020 TOT HUIDIG">
+					01/01/2020 TOT HUIDIG
+					</h>
+                    <h3 
+					data-english="EDUCATION TECHNOLOGIST," 
+					data-afrikaans="OPVOEDINGSTEGNOLOOG,">
+					OPVOEDINGSTEGNOLOOG,
+					</h3>
+					<h3 
+					data-english="NORTH-WEST UNIVERSITY" 
+					data-afrikaans="NOORDWES-UNIVERSITEIT">
+					NOORDWES-UNIVERSITEIT
+					</h3>
                 </div>
                 <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
@@ -647,48 +843,155 @@ function toggleSection(header) {
                 <strong>Key Roles:</strong>
 								<ul>
 									<li>
-										<strong>Business Analyst/Developer:</strong>
-										<ul>
-											<li>Business Process Optimization: Analyzed and streamlined business processes to enhance efficiency and effectiveness.</li>
-											<li>Project Management System Development: Designed, developed, and maintained a comprehensive project management system, including robust file storage and access control mechanisms.</li>
-											<li>Automation Platform Development: Created a platform to automate the management of requests received across various departments, significantly reducing manual effort and increasing response times.</li>
-											<li>Dynamic Dashboard Provision: Developed and maintained dynamic, interactive dashboards using PowerBI to provide real-time insights and reports for departmental decision-making.</li>
-											<li>Data Analytics Group Participation: Active member of the Data Analytics group at the Centre for Teaching and Learning, North-West University (NWU), focusing on the effective and ethical use of data to enhance student learning experiences.</li>
-										</ul>
+										<strong 
+										data-english="Business Analyst/Developer:" 
+										data-afrikaans="Besigheidsontleder/ontwikkelaar:">
+										Besigheidsontleder/ontwikkelaar:</strong>
+									<ul>
+										<li data-english="Business Process Optimization: Analyzed and streamlined business processes to enhance efficiency and effectiveness." 
+											data-afrikaans="Besigheidsprosesoptimalisering: Geanaliseer en gestroomlyn om doeltreffendheid te verbeter.">
+											Besigheidsprosesoptimalisering: Geanaliseer en gestroomlyn om doeltreffendheid te verbeter.
+										</li>
+										<li data-english="Project Management System Development: Designed, developed, and maintained a comprehensive project management system, including robust file storage and access control mechanisms."
+											data-afrikaans="Projekbestuurstelselontwikkeling: Ontwerp, ontwikkel, en in stand gehou 'n omvattende projekbestuurstelsel met lêerberging en toegangsbeheer.">
+											Projekbestuurstelselontwikkeling: Ontwerp, ontwikkel, en in stand gehou 'n omvattende projekbestuurstelsel met lêerberging en toegangsbeheer.
+										</li>
+										<li data-english="Automation Platform Development: Created a platform to automate the management of requests received across various departments, significantly reducing manual effort and increasing response times." 
+											data-afrikaans="Outomatiseringsplatformontwikkeling: Ontwikkel 'n platform om versoeke tussen departemente te outomatiseer, wat handmatige werk verminder en reaksietye verbeter.">
+											Outomatiseringsplatformontwikkeling: Ontwikkel 'n platform om versoeke tussen departemente te outomatiseer, wat handmatige werk verminder en reaksietye verbeter.
+										</li>
+										<li data-english="Dynamic Dashboard Provision: Developed and maintained dynamic, interactive dashboards using PowerBI to provide real-time insights and reports for departmental decision-making." 
+											data-afrikaans="Dinamiese paneelbordverskaffing: Ontwikkel en in stand gehou dinamiese dashboards met PowerBI vir intydse insigte en verslae.">
+											Dinamiese paneelbordverskaffing: Ontwikkel en in stand gehou dinamiese dashboards met PowerBI vir intydse insigte en verslae.
+										</li>
+										<li data-english="Data Analytics Group Participation: Active member of the Data Analytics group at the Centre for Teaching and Learning, focusing on the effective and ethical use of data to enhance student learning experiences."
+											data-afrikaans="Deelname aan Data-analisegroep: Aktiewe lid van die groep vir etiese gebruik van data om studente se leerervarings te verbeter.">
+											Deelname aan Data-analisegroep: Aktiewe lid van die groep vir etiese gebruik van data om studente se leerervarings te verbeter.
+										</li></ul>
 									</li>
 									<li>
-										<strong>Learning Experience Designer:</strong>
-										<ul>
-											<li>Course Design and Development</li>
-											<li>User Experience (UX) Optimization: Design intuitive and user-friendly LMS interfaces to enhance navigation and usability for both lecturers and students.</li>
-											<li>Training and Support: Provide training sessions and resources for lecturers on effective use of the LMS tools and features. Offer ongoing support and troubleshooting assistance for both lecturers and students.</li>
-											<li>Quality Assurance: Conduct regular reviews of course content and LMS functionality to ensure high-quality learning experiences. Ensure compliance with educational standards and institutional policies.</li>
-											<li>Spearhead technology innovations aimed at enhancing teaching and learning at NWU.</li>
-										</ul>
+										<strong 
+										data-english="Learning Experience Designer:" 
+										data-afrikaans="Leerervaringontwerper:">
+										Leerervaringontwerper:
+									</strong>
+									<ul>
+										<li 
+											data-english="Course Design and Development" 
+											data-afrikaans="Kursusontwerp en -ontwikkeling">
+											Kursusontwerp en -ontwikkeling
+										</li>
+										<li 
+											data-english="User Experience (UX) Optimization: Design intuitive and user-friendly LMS interfaces to enhance navigation and usability for both lecturers and students." 
+											data-afrikaans="Gebruikerservaring (UX) Optimalisering: Ontwerp intuïtiewe en gebruikersvriendelike LMS-koppelvlakke om navigasie en bruikbaarheid vir sowel dosente as studente te verbeter.">
+											Gebruikerservaring (UX) Optimalisering: Ontwerp intuïtiewe en gebruikersvriendelike LMS-koppelvlakke om navigasie en bruikbaarheid vir sowel dosente as studente te verbeter.
+										</li>
+										<li 
+											data-english="Training and Support: Provide training sessions and resources for lecturers on effective use of the LMS tools and features. Offer ongoing support and troubleshooting assistance for both lecturers and students." 
+											data-afrikaans="Opleiding en Ondersteuning: Verskaf opleidingsessies en hulpbronne vir dosente oor die effektiewe gebruik van LMS-hulpmiddels en funksies. Bied deurlopende ondersteuning en probleemoplossingshulp vir sowel dosente as studente.">
+											Opleiding en Ondersteuning: Verskaf opleidingsessies en hulpbronne vir dosente oor die effektiewe gebruik van LMS-hulpmiddels en funksies. Bied deurlopende ondersteuning en probleemoplossingshulp vir sowel dosente as studente.
+										</li>
+										<li 
+											data-english="Quality Assurance: Conduct regular reviews of course content and LMS functionality to ensure high-quality learning experiences. Ensure compliance with educational standards and institutional policies." 
+											data-afrikaans="Kwaliteitsversekering: Voer gereelde hersienings van kursusinhoud en LMS-funksionaliteit uit om te verseker dat leerervaringe van hoë gehalte is. Verseker nakoming van onderwysstandaarde en instellingsbeleid.">
+											Kwaliteitsversekering: Voer gereelde hersienings van kursusinhoud en LMS-funksionaliteit uit om te verseker dat leerervaringe van hoë gehalte is. Verseker nakoming van onderwysstandaarde en instellingsbeleid.
+										</li>
+										<li 
+											data-english="Spearhead technology innovations aimed at enhancing teaching and learning at NWU." 
+											data-afrikaans="Leid die tegnologie-innoveerings wat gemik is op die bevordering van onderrig en leer by NWU.">
+											Leid die tegnologie-innoveerings wat gemik is op die bevordering van onderrig en leer by NWU.
+										</li>
+									</ul>
 									</li>
 									<li>
-										<strong>Project Management:</strong>
-										<ul>
-											<li>Project Planning: Develop detailed project plans, including scope, objectives, timelines, and resource allocation. Define project milestones, deliverables, and success criteria.</li>
-											<li>Resource Management: Allocate and manage resources effectively, including team members, budgets, and technology. Coordinate with stakeholders to ensure the availability and alignment of resources.</li>
-											<li>Risk Management: Identify potential risks and issues that may impact the project. Develop and implement risk mitigation strategies and contingency plans.</li>
-											<li>Stakeholder Communication: Maintain regular communication with stakeholders to provide updates and gather feedback. Facilitate meetings and presentations to ensure all parties are informed and engaged.</li>
-											<li>Budget Management: Monitor project expenditures and ensure the project stays within budget. Manage financial resources and approve budget adjustments as necessary.</li>
-											<li>Project Execution and Monitoring: Oversee the execution of project tasks and activities, ensuring adherence to the project plan. Track project progress and performance, adjusting as needed to stay on track.</li>
-											<li>Quality Assurance: Ensure that project deliverables meet the required quality standards and specifications. Conduct reviews and testing to verify the quality and functionality of project outputs.</li>
-											<li>Team Leadership: Lead and motivate the project team, fostering a collaborative and productive work environment. Provide guidance, support, and feedback to team members.</li>
-											<li>Documentation and Reporting: Maintain comprehensive project documentation, including plans, reports, and meeting notes. Prepare and present progress reports to stakeholders and senior management.</li>
-										</ul>
+										<strong 
+										data-english="Project Management:" 
+										data-afrikaans="Projekbestuur:">
+										Projekbestuur:
+									</strong>
+									<ul>
+										<li 
+											data-english="Project Planning: Develop detailed project plans, including scope, objectives, timelines, and resource allocation. Define project milestones, deliverables, and success criteria." 
+											data-afrikaans="Projekbeplanning: Ontwikkel gedetailleerde projekplanne, insluitend omvang, doelwitte, tydlyne, en hulpbronallokasie. Definieer projekmylpale, aflewerings en suksesikriteria.">
+											Projekbeplanning: Ontwikkel gedetailleerde projekplanne, insluitend omvang, doelwitte, tydlyne, en hulpbronallokasie. Definieer projekmylpale, aflewerings en suksesikriteria.
+										</li>
+										<li 
+											data-english="Resource Management: Allocate and manage resources effectively, including team members, budgets, and technology. Coordinate with stakeholders to ensure the availability and alignment of resources." 
+											data-afrikaans="Hulpbronbestuur: Allokeer en bestuur hulpbronne doeltreffend, insluitend spanlede, begrotings en tegnologie. Koördineer met belanghebbendes om die beskikbaarheid en samehang van hulpbronne te verseker.">
+											Hulpbronbestuur: Allokeer en bestuur hulpbronne doeltreffend, insluitend spanlede, begrotings en tegnologie. Koördineer met belanghebbendes om die beskikbaarheid en samehang van hulpbronne te verseker.
+										</li>
+										<li 
+											data-english="Risk Management: Identify potential risks and issues that may impact the project. Develop and implement risk mitigation strategies and contingency plans." 
+											data-afrikaans="Risiko-bestuur: Identifiseer potensiële risiko's en kwessies wat die projek kan beïnvloed. Ontwikkel en implementeer risiko-mitigeringstrategieë en kontingensieplanne.">
+											Risiko-bestuur: Identifiseer potensiële risiko's en kwessies wat die projek kan beïnvloed. Ontwikkel en implementeer risiko-mitigeringstrategieë en kontingensieplanne.
+										</li>
+										<li 
+											data-english="Stakeholder Communication: Maintain regular communication with stakeholders to provide updates and gather feedback. Facilitate meetings and presentations to ensure all parties are informed and engaged." 
+											data-afrikaans="Kommunikasie met Belanghebbendes: Onderhou gereelde kommunikasie met belanghebbendes om opdaterings te verskaf en terugvoer in te samel. Fasiliteer vergaderings en aanbiedings om te verseker dat alle partye ingelig en betrokke is.">
+											Kommunikasie met Belanghebbendes: Onderhou gereelde kommunikasie met belanghebbendes om opdaterings te verskaf en terugvoer in te samel. Fasiliteer vergaderings en aanbiedings om te verseker dat alle partye ingelig en betrokke is.
+										</li>
+										<li 
+											data-english="Budget Management: Monitor project expenditures and ensure the project stays within budget. Manage financial resources and approve budget adjustments as necessary." 
+											data-afrikaans="Begrotingsbestuur: Monitor projekbesteding en verseker dat die projek binne begroting bly. Bestuur finansiële hulpbronne en keur begrotingsaanpassings goed waar nodig.">
+											Begrotingsbestuur: Monitor projekbesteding en verseker dat die projek binne begroting bly. Bestuur finansiële hulpbronne en keur begrotingsaanpassings goed waar nodig.
+										</li>
+										<li 
+											data-english="Project Execution and Monitoring: Oversee the execution of project tasks and activities, ensuring adherence to the project plan. Track project progress and performance, adjusting as needed to stay on track." 
+											data-afrikaans="Projekuitvoering en Monitering: Oorsee die uitvoering van projek take en aktiwiteite, en verseker nakoming van die projekplan. Volg die vordering en prestasie van die projek, en pas dit aan waar nodig om op koers te bly.">
+											Projekuitvoering en Monitering: Oorsee die uitvoering van projek take en aktiwiteite, en verseker nakoming van die projekplan. Volg die vordering en prestasie van die projek, en pas dit aan waar nodig om op koers te bly.
+										</li>
+										<li 
+											data-english="Quality Assurance: Ensure that project deliverables meet the required quality standards and specifications. Conduct reviews and testing to verify the quality and functionality of project outputs." 
+											data-afrikaans="Kwaliteitsversekering: Verseker dat projekaflewerings aan die vereiste gehalte standaarde en spesifikasies voldoen. Voer hersienings en toetse uit om die gehalte en funksionaliteit van projekuitsette te verifieer.">
+											Kwaliteitsversekering: Verseker dat projekaflewerings aan die vereiste gehalte standaarde en spesifikasies voldoen. Voer hersienings en toetse uit om die gehalte en funksionaliteit van projekuitsette te verifieer.
+										</li>
+										<li 
+											data-english="Team Leadership: Lead and motivate the project team, fostering a collaborative and productive work environment. Provide guidance, support, and feedback to team members." 
+											data-afrikaans="Spanleierskap: Lei en motiveer die projekspan, en bevorder 'n samewerkende en produktiewe werkomgewing. Verskaf leiding, ondersteuning en terugvoer aan spanlede.">
+											Spanleierskap: Lei en motiveer die projekspan, en bevorder 'n samewerkende en produktiewe werkomgewing. Verskaf leiding, ondersteuning en terugvoer aan spanlede.
+										</li>
+										<li 
+											data-english="Documentation and Reporting: Maintain comprehensive project documentation, including plans, reports, and meeting notes. Prepare and present progress reports to stakeholders and senior management." 
+											data-afrikaans="Dokumentasie en Verslaggewing: Onderhou omvattende projekdokumentasie, insluitend planne, verslae en vergaderingsnotas. Berei en lewer vorderingsverslae aan belanghebbendes en senior bestuur." 
+											> 
+											Dokumentasie en Verslaggewing: Onderhou omvattende projekdokumentasie, insluitend planne, verslae en vergaderingsnotas. Berei en lewer vorderingsverslae aan belanghebbendes en senior bestuur.
+										</li>
+									</ul>
+
 									</li>
 								</ul>
-								<strong>Project List:</strong>
-								<ul>
-									<li>Adaptive Learning leveraging Artificial intelligence within Higher Education</li>
-									<li>Digital classroom development</li>
-									<li>LMS satisfaction project</li>
-									<li>Video transfer project</li>
-									<li>SCORM project for articulate artifacts</li>
-								</ul>
+								<strong 
+								data-english="Project List:" 
+								data-afrikaans="Projeklys:">
+								Projeklys:
+							</strong>
+							<ul>
+								<li 
+									data-english="Adaptive Learning leveraging Artificial intelligence within Higher Education" 
+									data-afrikaans="Aanpasbare leer wat Kunsmatige Intelligensie binne Hoër Onderwys benut.">
+									Aanpasbare leer wat Kunsmatige Intelligensie binne Hoër Onderwys benut.
+								</li>
+								<li 
+									data-english="Digital classroom development" 
+									data-afrikaans="Ontwikkeling van digitale klaskamers">
+									Ontwikkeling van digitale klaskamers
+								</li>
+								<li 
+									data-english="LMS satisfaction project" 
+									data-afrikaans="LMS-tevredenheidsprojek">
+									LMS-tevredenheidsprojek
+								</li>
+								<li 
+									data-english="Video transfer project" 
+									data-afrikaans="Video-oordragprojek">
+									Video-oordragprojek
+								</li>
+								<li 
+									data-english="SCORM project for articulate artifacts" 
+									data-afrikaans="SCORM-projek vir artikuleer artefakte">
+									SCORM-projek vir artikuleer artefakte
+								</li>
+							</ul>
             </div>
         </div>
 
@@ -696,25 +999,65 @@ function toggleSection(header) {
 		        <!-- 2nd work experience-->
         <div class="work-section">
             <div class="work-header" onclick="toggleSection(this)">
-                <div>
-                    <h2>01/06/2018 TO 30/12/2019</h2>
-                    <h3>STUDY MATERIAL PRODUCTION COORDINATOR, <br/> NORTH-WEST UNIVERSITY</h3>
-                </div>
+				<div>
+					<h2 
+						data-english="01/06/2018 TO 30/12/2019" 
+						data-afrikaans="01/06/2018 TOT 30/12/2019">
+						01/06/2018 TOT 30/12/2019
+					</h2>
+					<h3 
+						data-english="STUDY MATERIAL PRODUCTION COORDINATOR, NORTH-WEST UNIVERSITY" 
+						data-afrikaans="STUDIE MATERIAAL PRODUKSIE KOÖRDINATOR, NOORDWES UNIVERSITEIT">
+						STUDIE MATERIAAL PRODUKSIE KOÖRDINATOR, NOORDWES UNIVERSITEIT
+					</h3>
+				</div>
+				
                 <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="work-content">
-                <strong>Key Responsibilities:</strong>
-                <ul>
-					<li>Oversee the production management of both hard copy and eLearning study materials.</li>
-					<li>Designed, developed, and implemented the current reporting sheet utilized for data analytics.</li>
-					<li>Contributed valuable data to enhance strategic planning, management, and the establishment of measurable objectives.</li>
-					<li>Manage and regularly update operational platform utilized for production management.</li>
-					<li>Provide training and guidance to Study Guide Coordinators.</li>
-					<!--<li>Address general inquiries promptly and effectively.</li>
-					<li>Invest in personal development to stay current and grow professionally.</li> -->
-					<li>Act as a liaison with the Information Technology Center (ITC).</li>
-					<li>Play a pivotal role in supporting the development of new production systems.</li>
-                </ul>
+				<strong 
+				data-english="Key Responsibilities:" 
+				data-afrikaans="Belangrike Verantwoordelikhede:">
+				Belangrike Verantwoordelikhede:
+			</strong>
+			<ul>
+				<li 
+					data-english="Oversee the production management of both hard copy and eLearning study materials." 
+					data-afrikaans="Toesig hou oor die produksiebestuur van sowel hardkopie as eLearning-studiemateriaal.">
+					Toesig hou oor die produksiebestuur van sowel hardkopie as eLearning-studiemateriaal.
+				</li>
+				<li 
+					data-english="Designed, developed, and implemented the current reporting sheet utilized for data analytics." 
+					data-afrikaans="Ontwerp, ontwikkel en geïmplementeer die huidige verslagdoeningsblad wat vir data-analise gebruik word.">
+					Ontwerp, ontwikkel en geïmplementeer die huidige verslagdoeningsblad wat vir data-analise gebruik word.
+				</li>
+				<li 
+					data-english="Contributed valuable data to enhance strategic planning, management, and the establishment of measurable objectives." 
+					data-afrikaans="Bygedra waardevolle data om strategiese beplanning, bestuur en die vasstelling van meetbare doelwitte te verbeter.">
+					Bygedra waardevolle data om strategiese beplanning, bestuur en die vasstelling van meetbare doelwitte te verbeter.
+				</li>
+				<li 
+					data-english="Manage and regularly update operational platform utilized for production management." 
+					data-afrikaans="Bestuur en werk gereeld die operasionele platform wat vir produksiebestuur gebruik word, op.">
+					Bestuur en werk gereeld die operasionele platform wat vir produksiebestuur gebruik word, op.
+				</li>
+				<li 
+					data-english="Provide training and guidance to Study Guide Coordinators." 
+					data-afrikaans="Bied opleiding en leiding aan Studie Gids Koördineerders.">
+					Bied opleiding en leiding aan Studie Gids Koördineerders.
+				</li>
+				<li 
+					data-english="Act as a liaison with the Information Technology Center (ITC)." 
+					data-afrikaans="Optree as 'n skakelpersoon met die Inligtingstegnologie Sentrum (ITC).">
+					Optree as 'n skakelpersoon met die Inligtingstegnologie Sentrum (ITC).
+				</li>
+				<li 
+					data-english="Play a pivotal role in supporting the development of new production systems." 
+					data-afrikaans="Speel 'n deurslaggewende rol in die ondersteuning van die ontwikkeling van nuwe produksiestelsels.">
+					Speel 'n deurslaggewende rol in die ondersteuning van die ontwikkeling van nuwe produksiestelsels.
+				</li>
+			</ul>
+			
             </div>
         </div>
 
@@ -722,27 +1065,85 @@ function toggleSection(header) {
 
 		<div class="work-section">
             <div class="work-header" onclick="toggleSection(this)">
-                <div>
-                    <h2>01/04/2014 TO 31/03/2018</h2>
-                    <h3>FACTORY MANAGER,  <br/> HENORG MELKERY</h3>
-                </div>
+				<div>
+					<h2 
+						data-english="01/04/2014 TO 31/03/2018" 
+						data-afrikaans="01/04/2014 TOT 31/03/2018">
+						01/04/2014 TOT 31/03/2018
+					</h2>
+					<h3 
+						data-english="FACTORY MANAGER, HENORG MELKERY" 
+						data-afrikaans="FABRIEKBESTUURDER, HENORG MELKERY">
+						FABRIEKBESTUURDER, HENORG MELKERY
+					</h3>
+				</div>
+				
                 <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="work-content">
-                <strong>Key Responsibilities:</strong>
-                <ul>
-					<li>Ensured rigorous quality control to maintain high standards of product quality.</li>
-					<li>Acted as the primary liaison with consumers, addressing inquiries and resolving issues promptly.</li>
-					<li>Managed daily operations to ensure efficiency and productivity.</li>
-					<li>Optimized resource and material management to minimize business costs.</li>
-					<li>Ensured compliance with all legislative requirements related to Quality and Health & Safety.</li>
-					<li>Oversaw Support Services, including Human Resources, Information Technology, and Finance.</li>
-					<li>Handled administrative tasks to support smooth factory operations.</li>
-					<li>Directed merchandising strategies to enhance product visibility and sales.</li>
-					<li>Coordinated logistics to ensure timely delivery and inventory management.</li>
-					<li>Supervised maintenance activities to ensure equipment functionality and safety.</li>
-					<li>Performed various ad hoc tasks as needed to support factory operations.</li>
-                </ul>
+				<strong 
+				data-english="Key Responsibilities:" 
+				data-afrikaans="Belangrike Verantwoordelikhede:">
+				Belangrike Verantwoordelikhede:
+			</strong>
+			<ul>
+				<li 
+					data-english="Ensured rigorous quality control to maintain high standards of product quality." 
+					data-afrikaans="Het streng kwaliteitsbeheer verseker om hoë standaarde van produkgehalte te handhaaf.">
+					Het streng kwaliteitsbeheer verseker om hoë standaarde van produkgehalte te handhaaf.
+				</li>
+				<li 
+					data-english="Acted as the primary liaison with consumers, addressing inquiries and resolving issues promptly." 
+					data-afrikaans="Het as die primêre skakelpersoon met verbruikers opgetree, navrae aangespreek en probleme vinnig opgelos.">
+					Het as die primêre skakelpersoon met verbruikers opgetree, navrae aangespreek en probleme vinnig opgelos.
+				</li>
+				<li 
+					data-english="Managed daily operations to ensure efficiency and productivity." 
+					data-afrikaans="Het daaglikse bedrywighede bestuur om doeltreffendheid en produktiwiteit te verseker.">
+					Het daaglikse bedrywighede bestuur om doeltreffendheid en produktiwiteit te verseker.
+				</li>
+				<li 
+					data-english="Optimized resource and material management to minimize business costs." 
+					data-afrikaans="Het hulpbronne en materiaalbestuur geoptimaliseer om besigheidskoste te minimaliseer.">
+					Het hulpbronne en materiaalbestuur geoptimaliseer om besigheidskoste te minimaliseer.
+				</li>
+				<li 
+					data-english="Ensured compliance with all legislative requirements related to Quality and Health & Safety." 
+					data-afrikaans="Het voldoen aan alle wetlike vereistes met betrekking tot Kwaliteit en Gesondheid & Veiligheid verseker." >
+					Het voldoen aan alle wetlike vereistes met betrekking tot Kwaliteit en Gesondheid & Veiligheid verseker.
+				</li>
+				<li 
+					data-english="Oversaw Support Services, including Human Resources, Information Technology, and Finance." 
+					data-afrikaans="Het toesig gehou oor Ondersteuningsdienste, insluitend Menslike Hulpbronne, Inligtingstegnologie en Finansies.">
+					Het toesig gehou oor Ondersteuningsdienste, insluitend Menslike Hulpbronne, Inligtingstegnologie en Finansies.
+				</li>
+				<li 
+					data-english="Handled administrative tasks to support smooth factory operations." 
+					data-afrikaans="Het administratiewe take hanteer om gladde fabrieksbedrywighede te ondersteun.">
+					Het administratiewe take hanteer om gladde fabrieksbedrywighede te ondersteun.
+				</li>
+				<li 
+					data-english="Directed merchandising strategies to enhance product visibility and sales." 
+					data-afrikaans="Het bemarkingsstrategieë gemanageer om produk sigbaarheid en verkope te verbeter.">
+					Het bemarkingsstrategieë gemanageer om produk sigbaarheid en verkope te verbeter.
+				</li>
+				<li 
+					data-english="Coordinated logistics to ensure timely delivery and inventory management." 
+					data-afrikaans="Het logistiek gekoördineer om betyds aflewering en voorraadbestuur te verseker.">
+					Het logistiek gekoördineer om betyds aflewering en voorraadbestuur te verseker.
+				</li>
+				<li 
+					data-english="Supervised maintenance activities to ensure equipment functionality and safety." 
+					data-afrikaans="Het onderhoudsaktiwiteite toesig gehou om die funksionaliteit en veiligheid van toerusting te verseker.">
+					Het onderhoudsaktiwiteite toesig gehou om die funksionaliteit en veiligheid van toerusting te verseker.
+				</li>
+				<li 
+					data-english="Performed various ad hoc tasks as needed to support factory operations." 
+					data-afrikaans="Het verskeie ad hoc take verrig soos benodig om fabriekbedrywighede te ondersteun.">
+					Het verskeie ad hoc take verrig soos benodig om fabriekbedrywighede te ondersteun.
+				</li>
+			</ul>
+			
             </div>
         </div>
 
@@ -750,37 +1151,128 @@ function toggleSection(header) {
 
 		 <div class="work-section">
             <div class="work-header" onclick="toggleSection(this)">
-                <div>
-                    <h2>01/01/2011 TO 31/05/2014</h2>
-                    <h3>RESEARCH ASSISTANT AND FIELDWORK MANAGER, <br/> MARKDATA</h3>
-                </div>
+				<div>
+					<h2 
+						data-english="01/01/2011 TO 31/05/2014" 
+						data-afrikaans="01/01/2011 TOT 31/05/2014">
+						01/01/2011 TOT 31/05/2014
+					</h2>
+					<h3 
+						data-english="RESEARCH ASSISTANT AND FIELDWORK MANAGER, MARKDATA" 
+						data-afrikaans="NAVORSINGSASSISTENT EN VELDWERKBESTUURDER, MARKDATA">
+						NAVORSINGSASSISTENT EN VELDWERKBESTUURDER, MARKDATA
+					</h3>
+				</div>
+				
                 <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="work-content">
-                <strong>Key Responsibilities:</strong>
-                <ul>
-					<li>Designed and structured comprehensive questionnaires.</li>
-					<li>Managed the administration of research projects, both before and after data collection.</li>
-					<li>Oversaw the administration and coordination of fieldwork activities.</li>
-					<li>Trained fieldworkers in face-to-face, telephone, and CATI (SNAP Surveys) interviewing techniques.</li>
-					<li>Managed databases and conducted data mining for research purposes.</li>
-					<li>Designed call center architecture for computer-assisted interviews.</li>
-					<li>Acted as a liaison with project stakeholders, ensuring clear communication and project alignment.</li>
-					<li>Trained and supervised coders to ensure data accuracy.</li>
-					<li>Captured and processed data efficiently and accurately.</li>
-					<li>Implemented rigorous quality control measures.</li>
-					<li>Conducted frequencies and logic tests on databases to ensure data integrity.</li>
-					<li>Tabulated data using SPSS for detailed analysis.</li>
-					<li>Created tables and graphs for inclusion in final reports.</li>
-					<li>Formatted and edited proposals and reports to ensure clarity and professionalism.</li>
-					<li>Performed various ad hoc tasks as required to support research projects.</li>
-				</ul>
-				<strong>Project List:</strong>
-				<ul>
-					<li>UCT satisfaction study</li>
-					<li>Political influence study</li>
-					<li>Telkom internal questionnaires</li>
-                </ul>
+				<strong 
+				data-english="Key Responsibilities:" 
+				data-afrikaans="Belangrike Verantwoordelikhede:">
+				Belangrike Verantwoordelikhede:
+			</strong>
+			<ul>
+				<li 
+					data-english="Designed and structured comprehensive questionnaires." 
+					data-afrikaans="Het omvattende vraelyste ontwerp en gestruktureer.">
+					Het omvattende vraelyste ontwerp en gestruktureer.
+				</li>
+				<li 
+					data-english="Managed the administration of research projects, both before and after data collection." 
+					data-afrikaans="Het die administrasie van navorsingsprojekte bestuur, beide voor en na data-insameling.">
+					Het die administrasie van navorsingsprojekte bestuur, beide voor en na data-insameling.
+				</li>
+				<li 
+					data-english="Oversaw the administration and coordination of fieldwork activities." 
+					data-afrikaans="Het die administrasie en koördinering van veldwerkaktiwiteite toesig gehou.">
+					Het die administrasie en koördinering van veldwerkaktiwiteite toesig gehou.
+				</li>
+				<li 
+					data-english="Trained fieldworkers in face-to-face, telephone, and CATI (SNAP Surveys) interviewing techniques." 
+					data-afrikaans="Het veldwerkers opgelei in face-to-face, telefoongeselskap, en CATI (SNAP-opnames) onderhoude tegnieke.">
+					Het veldwerkers opgelei in face-to-face, telefoongeselskap, en CATI (SNAP-opnames) onderhoude tegnieke.
+				</li>
+				<li 
+					data-english="Managed databases and conducted data mining for research purposes." 
+					data-afrikaans="Het databasisse bestuur en data-mynbou vir navorsingsdoeleindes uitgevoer.">
+					Het databasisse bestuur en data-mynbou vir navorsingsdoeleindes uitgevoer.
+				</li>
+				<li 
+					data-english="Designed call center architecture for computer-assisted interviews." 
+					data-afrikaans="Het die belentrumargitektuur ontwerp vir rekenaar-geassisteerde onderhoude.">
+					Het die belentrumargitektuur ontwerp vir rekenaar-geassisteerde onderhoude.
+				</li>
+				<li 
+					data-english="Acted as a liaison with project stakeholders, ensuring clear communication and project alignment." 
+					data-afrikaans="Het as 'n skakelpersoon met projekbelanghebbendes opgetree, en duidelike kommunikasie en projek-alignment verseker.">
+					Het as 'n skakelpersoon met projekbelanghebbendes opgetree, en duidelike kommunikasie en projek-alignment verseker.
+				</li>
+				<li 
+					data-english="Trained and supervised coders to ensure data accuracy." 
+					data-afrikaans="Het koders opgelei en toesig gehou om data-akuratesse te verseker.">
+					Het koders opgelei en toesig gehou om data-akuratesse te verseker.
+				</li>
+				<li 
+					data-english="Captured and processed data efficiently and accurately." 
+					data-afrikaans="Het data doeltreffend en akkuraat vasgelê en verwerk." >
+					Het data doeltreffend en akkuraat vasgelê en verwerk.
+				</li>
+				<li 
+					data-english="Implemented rigorous quality control measures." 
+					data-afrikaans="Het streng kwaliteitsbeheermaatreëls geïmplementeer.">
+					Het streng kwaliteitsbeheermaatreëls geïmplementeer.
+				</li>
+				<li 
+					data-english="Conducted frequencies and logic tests on databases to ensure data integrity." 
+					data-afrikaans="Het frekwensies en logiese toetse op databasisse uitgevoer om dataintegriteit te verseker.">
+					Het frekwensies en logiese toetse op databasisse uitgevoer om dataintegriteit te verseker.
+				</li>
+				<li 
+					data-english="Tabulated data using SPSS for detailed analysis." 
+					data-afrikaans="Het data in tabulese vorm aangebied met behulp van SPSS vir gedetailleerde analise.">
+					Het data in tabulese vorm aangebied met behulp van SPSS vir gedetailleerde analise.
+				</li>
+				<li 
+					data-english="Created tables and graphs for inclusion in final reports." 
+					data-afrikaans="Het tabelle en grafieke geskep vir insluiting in finale verslae.">
+					Het tabelle en grafieke geskep vir insluiting in finale verslae.
+				</li>
+				<li 
+					data-english="Formatted and edited proposals and reports to ensure clarity and professionalism." 
+					data-afrikaans="Het voorstelle en verslae geformateer en redigeer om duidelikheid en profesionalisme te verseker.">
+					Het voorstelle en verslae geformateer en redigeer om duidelikheid en profesionalisme te verseker.
+				</li>
+				<li 
+					data-english="Performed various ad hoc tasks as required to support research projects." 
+					data-afrikaans="Het verskeie ad hoc take verrig soos benodig om navorsingsprojekte te ondersteun.">
+					Het verskeie ad hoc take verrig soos benodig om navorsingsprojekte te ondersteun.
+				</li>
+			</ul>
+			
+			<strong 
+				data-english="Project List:" 
+				data-afrikaans="Projeklys:">
+				Projeklys:
+			</strong>
+			<ul>
+				<li 
+					data-english="UCT satisfaction study" 
+					data-afrikaans="UCT tevredenheidsstudie">
+					UCT tevredenheidsstudie
+				</li>
+				<li 
+					data-english="Political influence study" 
+					data-afrikaans="Politieke invloedstudie">
+					Politieke invloedstudie
+				</li>
+				<li 
+					data-english="Telkom internal questionnaires" 
+					data-afrikaans="Telkom interne vraelyste">
+					Telkom interne vraelyste
+				</li>
+			</ul>
+			
             </div>
         </div>
 
@@ -802,16 +1294,33 @@ function toggleSection(header) {
 						<article id="about">
 							<h2 class="major">About me</h2>
 							<span class="image main"><img src="images/About.jpg" alt="" /></span>
-							<p>Being a devoted father with a love for cooking, community involvement, and a hobby of growing acorn trees, I bring a well-rounded perspective to my professional endeavors. My personal interests have cultivated patience, creativity, and a strong sense of community, which I translate into my work. </p>
-							<p>In my current position as an Education Technologist at CTL, I have had the privilege to spearhead the development and maintenance of IT solutions across diverse business areas within the department. This role has enabled me to take the lead on technology innovation projects and engage in data analytics, effectively aligning technological advancements with the overarching strategic goals of NWU. My experience has equipped me with a thorough understanding of the systematic and methodical investigation, analysis, and documentation of business functions and processes. This expertise has proven invaluable in my ability to pinpoint and address specific business needs with timely and efficient solutions, encompassing everything from systems development to process enhancement and organizational transformation.</p>
-						</article>
+							<p 
+							data-english="Being a devoted father with a love for cooking, community involvement, and a hobby of growing acorn trees, I bring a well-rounded perspective to my professional endeavors. My personal interests have cultivated patience, creativity, and a strong sense of community, which I translate into my work." 
+							data-afrikaans="As 'n toegewyde pa met 'n liefde vir kook, gemeenskapsbetrokkenheid, en 'n stokperdjie om eikebome te kweek, bring ek 'n goed afgeronde perspektief na my professionele pogings. My persoonlike belangstellings het geduld, kreatiwiteit en 'n sterk gemeenskapsgevoel gekweek, wat ek in my werk toepas.">
+							Being a devoted father with a love for cooking, community involvement, and a hobby of growing acorn trees, I bring a well-rounded perspective to my professional endeavors. My personal interests have cultivated patience, creativity, and a strong sense of community, which I translate into my work.
+						</p>
+						<p 
+							data-english="In my current position as an Education Technologist at CTL, I have had the privilege to spearhead the development and maintenance of IT solutions across diverse business areas within the department. This role has enabled me to take the lead on technology innovation projects and engage in data analytics, effectively aligning technological advancements with the overarching strategic goals of NWU. My experience has equipped me with a thorough understanding of the systematic and methodical investigation, analysis, and documentation of business functions and processes. This expertise has proven invaluable in my ability to pinpoint and address specific business needs with timely and efficient solutions, encompassing everything from systems development to process enhancement and organizational transformation." 
+							data-afrikaans="In my huidige posisie as 'n Onderwys-tegnoloog by CTL, het ek die voorreg gehad om leiding te neem oor die ontwikkeling en instandhouding van IT-oplossings oor verskeie sake-areas binne die departement. Hierdie rol het my in staat gestel om leiding te neem oor tegnologie-innovasieprojekte en data-analise aan te pak, wat tegnologiese vooruitgang doeltreffend belyn met die oorhoofse strategiese doelwitte van NWU. My ervaring het my toegerus met 'n deeglike begrip van die sistematiese en metodiese ondersoek, analise, en dokumentasie van besigheidsfunksies en -prosesse. Hierdie kundigheid was van onskatbare waarde in my vermoë om spesifieke besigheidsbehoeftes te identifiseer en aan te spreek met tydige en doeltreffende oplossings, insluitend alles van stelselontwikkeling tot prosesverbetering en organisatoriese transformasie.">
+							In my current position as an Education Technologist at CTL, I have had the privilege to spearhead the development and maintenance of IT solutions across diverse business areas within the department. This role has enabled me to take the lead on technology innovation projects and engage in data analytics, effectively aligning technological advancements with the overarching strategic goals of NWU. My experience has equipped me with a thorough understanding of the systematic and methodical investigation, analysis, and documentation of business functions and processes. This expertise has proven invaluable in my ability to pinpoint and address specific business needs with timely and efficient solutions, encompassing everything from systems development to process enhancement and organizational transformation.
+						</p>
+					</article>
 
 						<!-- Contact -->
 						<article id="contact">
-								<h2 class="major">Contact Me:</h2>
-								<p>
-									<!-- Phone: <a href="tel:+27825529312">082 552 9312</a><br> -->
-									Email: <a href="mailto:hermanvdwg@gmail.com">hermanvdwg@gmail.com</a>
+								<h2 class="major" 
+								data-english="Contact Me:" 
+								data-afrikaans="Kontak My:">
+								Contact Me:
+								</h2>
+								<strong 
+								data-english="Email:" 
+								data-afrikaans="E-pos:">
+								Email:
+								</strong>
+
+								<p> 
+								<a href="mailto:hermanvdwg@gmail.com">hermanvdwg@gmail.com</a>
 								</p>
 
 								<ul class="icons">
@@ -992,6 +1501,108 @@ function toggleSection(header) {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+			const toggleButton = document.getElementById("language-toggle");
+			const contentElement = document.getElementById("content-element");
+			const education = document.getElementById("education");
+			const aboutme = document.getElementById("about"); 
+			const menuItems = document.querySelectorAll("#menu li");
+			const skills = document.getElementById("skills");
+			const contact = document.getElementById("contact");
+
+			toggleButton.addEventListener("click", function () {
+				if (toggleButton.textContent === "Afrikaans") {
+					toggleButton.textContent = "English";
+
+					// Update content section
+					contentElement.innerHTML = contentElement.getAttribute("data-afrikaans");
+
+
+					// Update education content
+					const educationElements = education.querySelectorAll("[data-english], [data-afrikaans]");
+					educationElements.forEach(element => {
+						if (element.getAttribute("data-afrikaans")) {
+							element.textContent = element.getAttribute("data-afrikaans");
+						}
+					});
+
+					        // Update about me content
+							const aboutMeElements = aboutme.querySelectorAll("[data-english], [data-afrikaans]");
+							aboutMeElements.forEach(element => {
+							if (element.getAttribute("data-afrikaans")) {
+								element.textContent = element.getAttribute("data-afrikaans");
+							}
+						});
+
+					        // Update skills content
+							const skillsElements = skills.querySelectorAll("[data-english], [data-afrikaans]");
+							skillsElements.forEach(element => {
+								if (element.getAttribute("data-afrikaans")) {
+									element.textContent = element.getAttribute("data-afrikaans");
+								}
+							});
+        // Update contact content
+        const contactElements = contact.querySelectorAll("[data-english], [data-afrikaans]");
+        contactElements.forEach(element => {
+            if (element.getAttribute("data-afrikaans")) {
+                element.textContent = element.getAttribute("data-afrikaans");
+            }
+        });
+
+					// Update menu items
+					menuItems.forEach(item => {
+						item.querySelector("a").textContent = item.getAttribute("data-afrikaans");
+
+						
+					});
+				} else {
+					toggleButton.textContent = "Afrikaans";
+
+					// Update content section
+					contentElement.innerHTML = contentElement.getAttribute("data-english");
+
+					 // Update education content
+					 const educationElements = education.querySelectorAll("[data-english], [data-afrikaans]");
+					educationElements.forEach(element => {
+						if (element.getAttribute("data-english")) {
+							element.textContent = element.getAttribute("data-english");
+						}
+					});
+
+					        // Update about me content
+							const aboutMeElements = aboutme.querySelectorAll("[data-english], [data-afrikaans]");
+						aboutMeElements.forEach(element => {
+							if (element.getAttribute("data-english")) {
+								element.textContent = element.getAttribute("data-english");
+							}
+						});
+
+					 // Update skills content
+					 const skillsElements = skills.querySelectorAll("[data-english], [data-afrikaans]");
+					skillsElements.forEach(element => {
+						if (element.getAttribute("data-english")) {
+							element.textContent = element.getAttribute("data-english");
+						}
+					});
+
+					        // Update contact content
+							const contactElements = contact.querySelectorAll("[data-english], [data-afrikaans]");
+        contactElements.forEach(element => {
+            if (element.getAttribute("data-english")) {
+                element.textContent = element.getAttribute("data-english");
+            }
+        });
+
+					// Update menu items
+					menuItems.forEach(item => {
+						item.querySelector("a").textContent = item.getAttribute("data-english");
+					});
+				}
+			});
+			</script>
+
+
 
 	</body>
 </html>
