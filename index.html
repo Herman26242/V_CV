@@ -10,28 +10,32 @@
 		<!-- The styling of the translation button. -->
 		<style>
 			#language-toggle {
-				position: fixed; /* Fix the position on the screen */
-				bottom: 20px; /* Distance from the bottom */
-				left: 50%; /* Position in the center horizontally */
-				transform: translateX(-50%); /* Adjust the element to truly center it */
-				padding: 10px 20px;
-				background-color: Black;
-				color: black;
-				border: none;
-				cursor: pointer;
-				font-weight: normal;
-				text-align: center;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 50px;
-				width: auto;
-				border-radius: 5px;
-			}
+    position: fixed; /* Fix the position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom of the page */
+    left: 50%; /* Position in the center horizontally */
+    transform: translateX(-50%); /* Center the button */
+    padding: 10px 20px;
+    background-color: black;
+    color: white; /* Set text color to white */
+    border: none;
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+}
 
-			#language-toggle:hover {
-				background-color: darkgray;
-			}
+#language-toggle:hover {
+    background-color: darkgray;
+}
+
+#menu {
+    margin-bottom: 60px; /* Add bottom margin to create space for the language toggle button */
+}
 
 		</style>
 
@@ -74,11 +78,11 @@
 						</ul>
 					</nav>
 
-					
+					<button id="language-toggle" type="button" >Afrikaans</button>	
 				</header>
 				
 				<br/>
-				<button id="language-toggle" type="button" >Afrikaans</button>
+				
 
 
 
