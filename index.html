@@ -12,7 +12,7 @@
 #language-toggle {
     position: fixed; /* Fix the position relative to the viewport */
     top: 20px; /* Distance from the top of the page */
-    right: 20px; /* Position to the right of the page */
+    right: 20px; /* Distance from the right of the page */
     padding: 10px 20px;
     background-color: black;
     color: white; /* Set text color to white */
@@ -26,11 +26,13 @@
     height: 50px;
     width: auto;
     border-radius: 5px;
+    z-index: 9999; /* Ensure the button appears above other elements */
 }
 
 #language-toggle:hover {
     background-color: darkgray;
 }
+
 
 
 
