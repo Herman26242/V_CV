@@ -10,28 +10,30 @@
 		<!-- The styling of the translation button. -->
 		<style>
 #language-toggle {
-    position: fixed; /* Fix the position relative to the viewport */
-    top: 20px; /* Distance from the top of the page */
-    right: 20px; /* Distance from the right of the page */
-    padding: 10px 20px;
+    position: absolute; /* Position relative to the container or body */
+    top: 20px; /* Set distance from top of the body */
+    right: 20px; /* Set distance from the right side of the body */
+    padding: 5px 15px;
     background-color: black;
-    color: white; /* Set text color to white */
+    color: white;
     border: none;
     cursor: pointer;
     font-weight: normal;
+    font-size: 12px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 30px;
     width: auto;
     border-radius: 5px;
-    z-index: 9999; /* Ensure the button appears above other elements */
+    z-index: 9999;
 }
 
 #language-toggle:hover {
     background-color: darkgray;
 }
+
 
 
 
@@ -53,7 +55,7 @@
 
 				<!-- Header -->
 				<header id="header">
-					
+					<button id="language-toggle" type="button" >Afrikaans</button>	
 					</style>
 					<div class="logo" style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.7);">
 						<img src="images/logo.png" alt="Logo" style="max-width: 50%; height: auto; padding-right: 10px">
@@ -79,7 +81,7 @@
 							<li data-english="Skills" data-afrikaans="Vaardighede" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#skills">Skills</a></li>
 							<li data-english="Contact me" data-afrikaans="Kontak My" style="background-color: rgba(255, 255, 255, 0.7); color: rgba(0, 0, 0, 1); font-weight: bold;"><a href="#contact">Contact Me</a></li>
 						</ul>
-						<button id="language-toggle" type="button" >Afrikaans</button>	
+						
 					</nav>
 
 					
