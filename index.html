@@ -736,6 +736,7 @@ function toggleSection(header) {
 
 
 						<article id="work">
+							<h2 class="major" data-english="Professional Experience" data-afrikaans="Professionele Ervaring">Professional <br/> Experience</h2>
 
 
 							<style>
@@ -828,7 +829,7 @@ function toggleSection(header) {
     </style>
 
 <body>
-	<h2 class="major" data-english="Professional Experience" data-afrikaans="Professionele Ervaring">Professional <br/> Experience</h2>
+	
 
 
 	<span class="image main"><img src="images/Work.jpg" alt="" /></span>
@@ -1526,6 +1527,7 @@ function toggleSection(header) {
 			const menuItems = document.querySelectorAll("#menu li");
 			const skills = document.getElementById("skills");
 			const contact = document.getElementById("contact");
+			const work = document.getElementById("work");
 
 			toggleButton.addEventListener("click", function () {
 				if (toggleButton.textContent === "Afrikaans") {
@@ -1558,6 +1560,16 @@ function toggleSection(header) {
 									element.textContent = element.getAttribute("data-afrikaans");
 								}
 							});
+
+							// Update work content
+							const workElements = work.querySelectorAll("[data-english], [data-afrikaans]");
+							workElements.forEach(element => {
+								if (element.getAttribute("data-afrikaans")) {
+									element.textContent = element.getAttribute("data-afrikaans");
+								}
+							});
+
+
         // Update contact content
         const contactElements = contact.querySelectorAll("[data-english], [data-afrikaans]");
         contactElements.forEach(element => {
@@ -1599,6 +1611,14 @@ function toggleSection(header) {
 					skillsElements.forEach(element => {
 						if (element.getAttribute("data-english")) {
 							element.textContent = element.getAttribute("data-english");
+						}
+					});
+
+						// Update work content
+						const workElements = work.querySelectorAll("[data-english], [data-afrikaans]");
+						workElements.forEach(element => {
+						if (element.getAttribute("data-english")) {
+						element.textContent = element.getAttribute("data-english");
 						}
 					});
 
