@@ -72,6 +72,15 @@
 						<h1>Herman van der Westhuizen</h1>
 						<p>I am a highly motivated and hardworking individual seeking a new challenge which will utilize my meticulous attention to detail, fast learning, and friendly, professional manner. Eventual career goals include further study and personal improvement.</p>
 					</div>
+					<div class="content" id="content-element2" 
+					data-english="
+						<p>Experienced Software Developer with 4+ years of expertise in designing and developing high-performance applications. Proficient in full-stack Microsoft development, database management, and software architecture, with a strong focus on optimizing business processes and enhancing user experiences. </p>
+					" data-afrikaans="
+						<p>Ervare Sagtewareontwikkelaar met meer as 4 jaar ondervinding in die ontwerp en ontwikkeling van hoë-prestasie toepassings. Vaardig in Microsoft-ontwikkeling, databasisbestuur en sagteware-argitektuur, met 'n sterk fokus op die optimalisering van sakeprosesse en die verbetering van gebruikerservarings.</p>
+					"; style="padding-top:  50px;">
+						<p>Experienced Software Developer with 4+ years of expertise in designing and developing high-performance applications. Proficient in full-stack Microsoft development, database management, and software architecture, with a strong focus on optimizing business processes and enhancing user experiences. </p>
+					</div>
+					
 				</div>
 					<nav id = "menu">
 						<ul>
@@ -1538,6 +1547,7 @@ function toggleSection(header) {
 			<script>
 			const toggleButton = document.getElementById("language-toggle");
 			const contentElement = document.getElementById("content-element");
+			const contentElement2 = document.getElementById("content-element2");
 			const education = document.getElementById("education");
 			const aboutme = document.getElementById("about"); 
 			const menuItems = document.querySelectorAll("#menu li");
@@ -1551,6 +1561,9 @@ function toggleSection(header) {
 
 					// Update content section
 					contentElement.innerHTML = contentElement.getAttribute("data-afrikaans");
+
+					// Update content section
+					contentElement2.innerHTML = contentElement2.getAttribute("data-afrikaans");
 
 
 					// Update education content
@@ -1605,6 +1618,9 @@ function toggleSection(header) {
 
 					// Update content section
 					contentElement.innerHTML = contentElement.getAttribute("data-english");
+
+										// Update content section
+										contentElement2.innerHTML = contentElement2.getAttribute("data-english");
 
 					 // Update education content
 					 const educationElements = education.querySelectorAll("[data-english], [data-afrikaans]");
